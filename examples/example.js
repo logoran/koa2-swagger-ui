@@ -13,7 +13,12 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-app.use(mount('/mountdocs', logoranSwagger({ routePrefix: '/mountdocs' })));
+router.get('/moredocs', logoranSwagger({ routePrefix: false }));
+app
+  .use(router.routes())
+  .use(router.allowedMethods());
+
+app.use(mount('/mountdocs', logoranSwagger({ routePrefix: '/docs' })));
 
 /* istanbul ignore if */
 if (!module.parent) {

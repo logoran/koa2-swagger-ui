@@ -9,8 +9,8 @@ describe('logoran-swagger-ui', function() {
     return request(app.callback())
       .get('/docs')
       .expect('Content-Type', /html/)
-      .expect(/href="\/docs\/favicon-16x16\.png" sizes="16x16"/)
-      .expect(/href="\/docs\/favicon-32x32\.png" sizes="32x32"/)
+      .expect(/href="\.\/favicon-16x16\.png" sizes="16x16"/)
+      .expect(/href="\.\/favicon-32x32\.png" sizes="32x32"/)
       .expect(200);
   });
   it('should return icon16x16', function() {
@@ -35,10 +35,10 @@ describe('logoran-swagger-ui', function() {
   });
   it('should return index file from logoran router', function() {
     return request(app.callback())
-      .get('/mountdocs')
+      .get('/mountdocs/docs')
       .expect('Content-Type', /html/)
-      .expect(/href="\/mountdocs\/favicon-16x16\.png" sizes="16x16"/)
-      .expect(/href="\/mountdocs\/favicon-32x32\.png" sizes="32x32"/)
+      .expect(/href="\.\/favicon-16x16\.png" sizes="16x16"/)
+      .expect(/href="\.\/favicon-32x32\.png" sizes="32x32"/)
       .expect(200);
   });
   it('should return icon16x16', function() {
