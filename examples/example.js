@@ -1,13 +1,13 @@
-const Koa = require('koa');
-const koaSwagger = require('../lib/');
-const router = require('koa-router')();
+const Logoran = require('logoran');
+const logoranSwagger = require('../lib/');
+const router = require('logoran-router')();
 
-const app = new Koa();
+const app = new Logoran();
 module.exports = app;
 
-app.use(koaSwagger());
+app.use(logoranSwagger());
 
-router.get('/moredocs', koaSwagger({ routePrefix: false }));
+router.get('/moredocs', logoranSwagger({ routePrefix: false }));
 
 app
   .use(router.routes())

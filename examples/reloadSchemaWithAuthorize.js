@@ -1,8 +1,8 @@
-const Koa = require('koa');
-const koaSwagger = require('../lib/');
+const Logoran = require('logoran');
+const logoranSwagger = require('../lib/');
 
 /*************
- * koaSwagger Configuration
+ * logoranSwagger Configuration
  * reuse the schema security definition to authorize the user against the schema / spec
  * otherwise the user sees only the public part of the schema / spec
  * a simple header x-accesstoken is used for authorization; nothing else
@@ -52,9 +52,9 @@ const reloadSchemaWithAuth = function(system) {
   }
 };
 
-const app = new Koa();
+const app = new Logoran();
 
-app.use(koaSwagger({
+app.use(logoranSwagger({
   title: 'Portal API',
   routePrefix: '/docs/swagger',
   swaggerOptions: {

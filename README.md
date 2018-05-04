@@ -1,17 +1,17 @@
-# koa2-swagger-ui
+# logoran-swagger-ui
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-img]][travis-url]
 [![coverage][coverage-img]][coverage-url]
 
-[npm-image]: https://img.shields.io/npm/v/koa2-swagger-ui.svg
-[npm-url]: https://npmjs.org/package/koa2-swagger-ui
-[travis-img]: https://api.travis-ci.org/scttcper/koa2-swagger-ui.svg?branch=master
-[travis-url]: https://travis-ci.org/scttcper/koa2-swagger-ui
-[coverage-img]: https://codecov.io/gh/scttcper/koa2-swagger-ui/branch/master/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/scttcper/koa2-swagger-ui
+[npm-image]: https://img.shields.io/npm/v/logoran-swagger-ui.svg
+[npm-url]: https://npmjs.org/package/logoran-swagger-ui
+[travis-img]: https://api.travis-ci.org/logoran/logoran-swagger-ui.svg?branch=master
+[travis-url]: https://travis-ci.org/logoran/logoran-swagger-ui
+[coverage-img]: https://codecov.io/gh/logoran/logoran-swagger-ui/branch/master/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/logoran/logoran-swagger-ui
 
-Host swagger ui at a given directory from your koa v2 app.
+Host swagger ui at a given directory from your logoran app.
 
 Inspired by:
 
@@ -21,7 +21,7 @@ Inspired by:
 ## install
 
 ```
-npm install koa2-swagger-ui --save
+npm install logoran-swagger-ui --save
 ```
 
 ## config
@@ -51,13 +51,13 @@ favicon32: '/favicon-32x32.png', // default icon 32x32, set for self icon
 ## example
 
 ```javascript
-const Koa = require('koa');
-const koaSwagger = require('koa2-swagger-ui');
+const Logoran = require('logoran');
+const logoranSwagger = require('logoran-swagger-ui');
 
-const app = new Koa();
+const app = new Logoran();
 
 app.use(
-  koaSwagger({
+  logoranSwagger({
     routePrefix: '/swagger', // host at /swagger instead of default /docs
     swaggerOptions: {
       url: 'http://petstore.swagger.io/v2/swagger.json', // example path to json

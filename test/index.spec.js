@@ -4,14 +4,14 @@ const app = require('../examples/example');
 
 const json = require('../package.json');
 
-describe('koa2-swagger-ui', function() {
+describe('logoran-swagger-ui', function() {
   it('should return index file', function() {
     return request(app.callback())
       .get('/docs')
       .expect('Content-Type', /html/)
       .expect(200);
   });
-  it('should return index file from koa router', function() {
+  it('should return index file from logoran router', function() {
     return request(app.callback())
       .get('/moredocs')
       .expect('Content-Type', /html/)
