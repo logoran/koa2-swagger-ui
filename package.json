@@ -1,6 +1,6 @@
 {
   "name": "logoran-swagger-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Swagger UI middleware for logoran",
   "main": "lib/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "logoran": "^1.0.2",
     "logoran-mount": "^1.0.0",
-    "logoran-router": "^1.0.2",
+    "logoran-router": "^1.0.3",
     "mocha": "^5.1.1",
     "nyc": "^11.7.1",
     "semantic-release": "^15.1.7",

@@ -8,17 +8,14 @@ module.exports = app;
 
 app.use(logoranSwagger());
 
-router.get('/moredocs', logoranSwagger({ routePrefix: false, favicon16: '/unexisted16.png', favicon32: '/unexisted32.png' }));
+const middleware = logoranSwagger({ routePrefix: '/moredocs', favicon16: '/unexisted16.png', favicon32: '/unexisted32.png' });
+
+router.get(middleware.path, middleware);
 app
   .use(router.routes())
   .use(router.allowedMethods());
 
-router.get('/moredocs', logoranSwagger({ routePrefix: false }));
-app
-  .use(router.routes())
-  .use(router.allowedMethods());
-
-app.use(mount('/mountdocs', logoranSwagger({ routePrefix: '/docs' })));
+app.use(mount('/mountdocs', logoranSwagger({ routePrefix: false })));
 
 /* istanbul ignore if */
 if (!module.parent) {

@@ -53,7 +53,7 @@ describe('logoran-swagger-ui', function() {
   });
   it('should return index file from logoran mount router', function() {
     return request(app.callback())
-      .get('/mountdocs/docs')
+      .get('/mountdocs/')
       .expect('Content-Type', /html/)
       .expect(/href="\.\/favicon-16x16\.png" sizes="16x16"/)
       .expect(/href="\.\/favicon-32x32\.png" sizes="32x32"/)
