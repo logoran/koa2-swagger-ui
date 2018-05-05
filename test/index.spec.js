@@ -25,7 +25,25 @@ describe('logoran-swagger-ui', function() {
       .expect('Content-Type', /png/)
       .expect(200);
   });
-  it('should return index file from logoran router', function() {
+  it('should return swagger-ui.css', function() {
+    return request(app.callback())
+      .get('/swagger-ui.css')
+      .expect('Content-Type', /css/)
+      .expect(200);
+  });
+  it('should return swagger-ui-bundle.js', function() {
+    return request(app.callback())
+      .get('/swagger-ui-bundle.js')
+      .expect('Content-Type', /javascript/)
+      .expect(200);
+  });
+  it('should return swagger-ui-standalone-preset.js', function() {
+    return request(app.callback())
+      .get('/swagger-ui-standalone-preset.js')
+      .expect('Content-Type', /javascript/)
+      .expect(200);
+  });
+  it('should return index file from logoran get router', function() {
     return request(app.callback())
       .get('/moredocs')
       .expect('Content-Type', /html/)
@@ -33,7 +51,7 @@ describe('logoran-swagger-ui', function() {
       .expect(/href="\/unexisted32\.png" sizes="32x32"/)
       .expect(200);
   });
-  it('should return index file from logoran router', function() {
+  it('should return index file from logoran mount router', function() {
     return request(app.callback())
       .get('/mountdocs/docs')
       .expect('Content-Type', /html/)

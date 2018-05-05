@@ -67,7 +67,25 @@
 <div id="swagger-ui"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/{{swaggerVersion}}/swagger-ui-bundle.js"></script>
+<script>
+if (!window.SwaggerUIBundle) {
+  var script = document.createElement('script');
+  script.src = "./swagger-ui-bundle.js";
+  document.body.appendChild(script);
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = './swagger-ui.css';
+  document.head.appendChild(link);
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/{{swaggerVersion}}/swagger-ui-standalone-preset.js"></script>
+<script>
+if (!window.SwaggerUIStandalonePreset) {
+  var script = document.createElement('script');
+  script.src = "./swagger-ui-standalone-preset.js";
+  document.body.appendChild(script);
+}
+</script>
 <script>
 function HideTopbarPlugin() {
   // this plugin overrides the Topbar component to return nothing

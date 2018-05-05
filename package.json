@@ -1,6 +1,6 @@
 {
   "name": "logoran-swagger-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Swagger UI middleware for logoran",
   "main": "lib/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "handlebars": "^4.0.11",
-    "lodash.defaultsdeep": "^4.6.0"
+    "lodash.defaultsdeep": "^4.6.0",
+    "swagger-ui": "^3.14.0"
   },
   "peerDependencies": {
     "logoran": "^1.0.2"
