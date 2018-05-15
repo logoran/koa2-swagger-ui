@@ -1,8 +1,4 @@
-# logoran-swagger-ui
-
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-img]][travis-url]
-[![coverage][coverage-img]][coverage-url]
+# logoran-swagger-ui [![NPM version][npm-image]][npm-url] [![build status][travis-img]][travis-url] [![coverage][coverage-img]][coverage-url]
 
 [npm-image]: https://img.shields.io/npm/v/logoran-swagger-ui.svg
 [npm-url]: https://npmjs.org/package/logoran-swagger-ui
